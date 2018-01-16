@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@if (Session["userName"] != null)
+{
+    <br/>
+    <h2 style="margin-left:46%;margin-top:10px;padding-top:10px" @*class="login" onload="noBack();"
+    onpageshow="if (event.persisted) noBack();"*@>
+        Admin Actions
+   
+  @Html.ActionLink("Logout","Logout","Admin",null,new{ @class = "btn btn-primary btn-large,", @style = "float:right;margin-right:20px;" })
+        </h2>
+        <br />
+        <br/>
+}
+@*<script type="text/javascript">
+    window.history.forward();
+    function noBack() { window.history.forward(); }
+</script>
+<div style=
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;">*@
+    <p align='center' style="margin:0 auto;">
+        <table width='50%' style="margin-left:180px;">
+            <tr>
+                <td>@Html.ActionLink("Alumni", "Index", "Alumni", null, new { @class = "btn btn-primary btn-large, btn-block", @style = "margin-left:150px;" })</td>
+            </tr>
+            <tr>
+                <td>@Html.ActionLink("Announcements", "Index", "Announcements",null, new { @class = "btn btn-primary btn-large, btn-block", @style = "margin-left:150px;" })</td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.ActionLink("Commandants", "Index", "Commandants",null,  new { @class = "btn btn-primary btn-large, btn-block", @style = "margin-left:150px;" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.ActionLink("CyberAlerts", "Index", "cyberAlerts",null, new { @class = "btn btn-primary btn-large, btn-block", @style = "margin-left:150px;" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.ActionLink("Lectures", "Index", "Lectures",null, new { @class = "btn btn-primary btn-large, btn-block", @style = "margin-left:150px;" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.ActionLink("Quotes", "Index", "Quotes",null, new { @class = "btn btn-primary btn-large, btn-block", @style = "margin-left:150px;" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.ActionLink("Study Material", "Index", "Study_Material", null, new { @class = "btn btn-primary btn-large, btn-block", @style = "margin-left:150px;" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.ActionLink("Synopsis", "Index", "Synopses", null, new { @class = "btn btn-primary btn-large, btn-block", @style = "margin-left:150px;" })
+                </td>
+            </tr>
+        </table>
+    </p>
+
+

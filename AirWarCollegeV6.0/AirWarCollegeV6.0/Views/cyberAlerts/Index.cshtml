@@ -1,0 +1,44 @@
+﻿@model IEnumerable<AirWarCollegeV6._0.Models.cyberAlert>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" href="~/Content/table/normalize.min.css">
+<link rel="stylesheet" href="~/Content/table/table.css">
+<div style="padding-top:30px;">
+    @Html.ActionLink("Create New", "Create", "cyberAlerts", new { @class = "btn btn-primary btn-large", @style = "margin-left:360px;margin-bottom:10px;" })
+    @*@Html.ActionLink("Logout", "Admin", "cyberAlerts", new { @class = "btn btn-primary btn-large", @style = "float:right; margin-right:360px; margin-bottom:10px;" })*@
+</div>
+<div class="table-users" style="width:45%;margin:0 auto;margin-bottom:10px;">
+    <div class="header1">Cyber Alerts</div>
+    <table cellspacing="0">
+        <tr>
+            <th>CyberAlert Text</th>
+            <th>CyberAlert Date</th>
+            <th>Expires At</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cyberAlertText)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cyberAlertDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.expiresAt)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-primary btn-xs", })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-primary btn-xs", })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+

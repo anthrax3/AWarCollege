@@ -1,0 +1,55 @@
+﻿@model IEnumerable<AirWarCollegeV6._0.Models.Synopsis>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link rel="stylesheet" href="~/Content/table/normalize.min.css">
+<link rel="stylesheet" href="~/Content/table/table.css">
+<div style="padding-top:30px;">
+    @Html.ActionLink("Create New", "Create", "Synopses", new { @class = "btn btn-primary btn-large", @style = "margin-left:450px; margin-bottom:4px;" })
+    @*@Html.ActionLink("Logout", "Admin", "Alumni", new { @class = "btn btn-primary btn-large", @style = "float:right; margin-right:250px;" })*@
+</div>
+<div class="table-users" style="width:30%; margin:0 auto; margin-bottom:10px;">
+    <div class="header1">Synopses</div>
+    <table cellspacing="0">
+        <tr>
+            <th>
+                Uploader Name
+            </th>
+            <th>
+                File Name
+            </th>
+            @*<th>File</th>*@
+            <th>Download</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.uploaderName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileName)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.File)
+                    </td>*@
+                <td>
+                    @Html.ActionLink("Download", "Download", "Synopses", new { id = item.Id }, new { @target = "_blank" })
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary btn-xs", })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-primary btn-xs", })
+                </td>
+            </tr>
+
+        }
+
+    </table>
+</div>

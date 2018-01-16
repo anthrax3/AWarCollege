@@ -1,0 +1,48 @@
+﻿@model IEnumerable<AirWarCollegeV6._0.Models.Lecture>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" href="~/Content/table/normalize.min.css">
+<link rel="stylesheet" href="~/Content/table/table.css">
+<div style="padding-top:30px;">
+    @Html.ActionLink("Create New", "Create", "Lectures", new { @class = "btn btn-primary btn-large", @style = "margin-left:380px;margin-bottom:10px;" })
+    @*@Html.ActionLink("Logout", "Admin", "Lectures", new { @class = "btn btn-primary btn-large", @style = "float:right; margin-right:380px;margin-bottom:10px;" })*@
+</div>
+<div class="table-users" style="width:40%; margin:0 auto; margin-bottom:10px;">
+    <div class="header1">Lectures</div>
+    <table cellspacing="0">
+        <tr>
+            <th>Lecture Topic</th>
+            <th>Speaker Name</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lectureTopic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.speakerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-primary btn-xs", })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-primary btn-xs", })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+

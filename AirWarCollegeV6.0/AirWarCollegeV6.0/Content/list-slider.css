@@ -1,0 +1,113 @@
+#list_slider_wrapper
+{
+	width:1039px;
+	height:280px;
+}
+#list_slider
+{
+	width:715px;
+	height:265px;
+	text-align:left;
+	/*background-color:#003333;*/
+	float:left;
+	margin: 5px 5px 15px 5px;
+}
+#featured{ 
+	width:408x; /*width of box  358 */
+	padding-right:300px;   /*250*/
+	position:relative; 
+/*	border-bottom-style:groove;*/
+	
+	border:2px solid #000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+
+	height:250px; 
+	background:#fff;
+}
+#featured ul.ui-tabs-nav{ 
+	position:absolute; 
+	top:0; left:403px;    /*353*/
+	list-style:none; 
+	padding:0; margin:0; 
+	width:300px; /* 250 width of thumb boxez*/
+}
+#featured ul.ui-tabs-nav li{ 
+	padding:1px 0; padding-left:13px;  
+	font-size:12px; 
+	color:#666; 
+}
+#featured ul.ui-tabs-nav li img{ 
+	float:left; margin:2px 5px; 
+	background:#fff; 
+	padding:2px; 
+	border:1px solid #eee;
+}
+#featured ul.ui-tabs-nav li span{ 
+/*	font-size:11px; font-family:Verdana; */
+	line-height:18px;
+
+}
+#featured li.ui-tabs-nav-item a{ 
+	display:block; 
+	height:60px; 
+	color:#333;  background:#fff; 
+	line-height:20px;
+}
+#featured li.ui-tabs-nav-item a:hover{ 
+	background:#f2f2f2; 
+}
+#featured li.ui-tabs-selected{ 
+	background:url('') top left no-repeat;  
+}
+#featured ul.ui-tabs-nav li.ui-tabs-selected a{ 
+	background:#ccc; 
+}
+#featured .ui-tabs-panel{ 
+	width:403px; height:250px; /*353 width of Shadow on picture */
+	background:#999; position:relative;
+}
+#featured .ui-tabs-panel .info{ 
+	position:absolute; 
+	top:190px; left:0; 
+	height:40px; 
+	padding: 10px 0 0 5px;
+	background: url(''); 
+}
+#featured .info h2{ 
+	font-size:16px;
+	/*font-family:Georgia, serif; */
+	color:#fff; padding:5px; margin:0;
+	overflow:hidden; 
+}
+#featured .info p{ 
+	margin:0 5px; 
+	/*font-family:Verdana;*/
+	font-size:12px; 
+	line-height:18px; color:#f0f0f0;
+}
+#featured .info a{ 
+	text-decoration:none; 
+	color:#fff; 
+}
+#featured .info a:hover{ 
+	text-decoration:underline; 
+}
+#featured .ui-tabs-hide{ 
+	display:none; 
+}
+
+#listsliderimg{
+	max-width: 400px;	
+	max-height: 250px;
+  	width: expression(this.width > 400 ? "400px" : true);
+  	height: expression(this.height > 250 ? "250px" : true);	
+}
+#listsliderimgS {
+    max-width: 80px;
+    max-height: 50px;
+    width: expression(this.width > 80 ? "80px" : true);
+    height: expression(this.height > 50 ? "50px" : true);
+}

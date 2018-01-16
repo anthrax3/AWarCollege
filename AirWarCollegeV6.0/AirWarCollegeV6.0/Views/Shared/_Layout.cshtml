@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html style="position: static; z-index: 100;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air War College</title>
+    <link rel="stylesheet" href="~/Content/main.css" type="text/css">
+    <!--Banner slider---->
+    <link type="text/css" href="~/Content/slider.css" rel="stylesheet">
+    <!--List slider---->
+    <link rel="stylesheet" type="text/css" href="~/Content/list-slider.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css">
+
+
+    <script type="text/javascript" src="~/Content/lib/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="~/Content/lib/list-slider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#featured> ul").tabs({ fx: { opacity: "toggle" } }).tabs("rotate", 5000, true);
+        });
+    </script>
+    <script type="text/javascript" src="~/Content/lib/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                effect: 'slideInLeft',
+                slices: 15,
+                boxCols: 8,
+                boxRows: 4,
+                animSpeed: 200,
+                pauseTime: 2000,
+                startSlide: 0,
+                directionNav: true,
+                controlNav: true,
+                controlNavThumbs: false,
+                pauseOnHover: true,
+                manualAdvance: false,
+                prevText: 'Prev',
+                nextText: 'Next',
+                randomStart: false,
+                beforeChange: function () { },
+                afterChange: function () { },
+                slideshowEnd: function () { },
+                lastSlide: function () { },
+                afterLoad: function () { }
+            });
+        });
+        //function loadalbum(lnk) {
+        //	event.preventDefault();
+        //	$(lnk).parent().submit();
+        //}
+    </script>
+
+</head>
+<body style="position: static; z-index: 100;">
+
+    <div class="wrapper" style="position: static; z-index: 100;">
+        <!---------------------------HEADER----------------------------->
+        <div class="header" style="position: relative; margin:0 auto; z-index: 100;">
+            <table style="width:100%;margin-left:200px;" border="0" cellpadding="0" cellspacing="1">
+                <tbody style="position:relative; left:50px; margin-left:50px;">
+                    <tr>
+                        <td  style="width:80px;margin-top:2px; padding-left:8%">
+                            <img src="@Url.Content("~/Content/images/logo.png")" style="width:70px;">
+                        </td>
+                        <td colspan="1"; style="margin-top:2px;font-size:24px;  font-style:italic; font-family:Georgia, 'Times New Roman', Times, serif; color:#FFf; line-height:30px; padding-left:50px">
+                            <b>Air War College Karachi, Pakistan</b>
+                        </td>
+                        <td  style="width:80px; margin-top:2px; padding-right:42%">
+                            <img src="@Url.Content("~/Content/images/paf-logo.png")" style="height:70px;">
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!---------------------------SLIDER----------------------------->
+        <div id="slider-wrapper">
+            <div id="slider" class="Slider nivoSlider" style="position: relative; height: 171px; width:1300px; background: url(&quot;@Url.Content("~/Content/images/header_1.jpg")&quot;) no-repeat;">
+                <img src="@Url.Content("~/Content/images/header_4.jpg")" alt="" style="display: none;">
+                <img src="@Url.Content("~/Content/images/header_3.jpg")" alt="" style="display: none; ">
+                <img src="@Url.Content("~/Content/images/header_3.jpg")" alt="" style="display: none;">
+                <img src="@Url.Content("~/Content/images/header_1.jpg")" alt="" style="display: none;">
+                <img src="@Url.Content("~/Content/images/header_4.jpg")" alt="" style="display: none;">
+                <img src="@Url.Content("~/Content/images/header_4.jpg")" alt="" style="display: none;">
+                <img src="@Url.Content("~/Content/images/header_3.jpg")" alt="" style="display: none; ">
+                <img src="@Url.Content("~/Content/images/header_3.jpg")" alt="" style="display: none;">
+                <img src="@Url.Content("~/Content/images/header_1.jpg")" alt="" style="display: none;">
+                <img src="@Url.Content("~/Content/images/header_3.jpg")" alt="" style="display: none;">
+                <img src="@Url.Content("~/Content/images/header_1.jpg")" alt="" style="display: none;">
+                <img src="@Url.Content("~/Content/images/header_3.jpg")" alt="" style="display: none;">
+                <img src="@Url.Content("~/Content/images/header_1.jpg")" alt="" style="display: none;">
+                <img src="@Url.Content("~/Content/images/header_3.jpg")" alt="" style="display: none;">
+
+            </div>
+        </div>
+        <!-----MENU---->
+        <div id="menu">
+            <ul id="nav">
+                <li class="top"><a href="@Url.Action("Index","Home")" class="top_link"><span>Home</span></a></li>
+                <li class="top"><a href="@Url.Action("HistoryofAWC","Home")" class="top_link"><span>History Of AWC</span></a></li>
+                <li class="top"><a href="@Url.Action("CommandantsInUI","Home")" class="top_link"><span>Commandant</span></a></li>
+                <li class="top"><a href="@Url.Action("AlumniInUI","Home")" class="top_link"><span>ALUMNI</span></a></li>
+                <li class="top"><a href="@Url.Action("Gallery","Home")" class="top_link"><span>Gallery</span></a></li>
+                <li class="top"><a href="@Url.Action("TrainingFacilities","Home")" class="top_link"><span>Training Facilities</span></a></li>
+                <li class="top"><a href="@Url.Action("ITFacilities","Home")" class="top_link"><span>IT Facilities</span></a></li>
+                <li class="top"><a href="@Url.Action("Library","Home")" class="top_link"><span>Library</span></a></li>
+            </ul>
+        </div>
+        <!-----Contents---->
+
+        
+            @RenderBody()
+                        <!-------------------------------FOOTER STARTS-------------------------------->
+            <div class="footer">
+                <div class="f-1">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="1">
+                        <tbody>
+                            <tr>
+                                <td nowrap="nowrap">
+                                    <a href="@Url.Action("Index","Home")" class="mainlevel" id="active_menu">Home</a><span class="mainlevel">|</span><a href="@Url.Action("Contact","Home")" class="mainlevel">Contact Us</a><span class="mainlevel">|</span><a href="sitemap.php" class="mainlevel">Sitemap</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!--f-1--->
+                <div class="f-3">Copyrights © 2017-2018 All rights reserved by &amp;AWC </div>
+                <div style="clear: both;"></div>
+            </div>
+            <!-------------------------------FOOTER ENDS-------------------------------->
+        </div> <!---Wraper ends--->
+    <div id="ui-datepicker-div" style="display: none;"></div>
+</body>
+</html>

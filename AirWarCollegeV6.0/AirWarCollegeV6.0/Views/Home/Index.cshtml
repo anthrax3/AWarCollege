@@ -1,0 +1,100 @@
+﻿@using AirWarCollegeV6._0.Models;
+@model ViewModel   
+    @{
+    ViewBag.Title = "Home Page";
+    }
+    <div class="content">
+        <div class="content-left">
+
+            <div class="rtbar" style="padding:10px 10px 10px 10px">
+                <div class="box-top"><div class="box-heading">Activities</div></div>
+                <div id="rt-nav">
+                    <ul>
+                        <li><a href="@Url.Action("Study_Material","Home")">Study Material</a></li>
+                        <li><a href="@Url.Action("Synopses","Home")">Synopses</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#3</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#4</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#5</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#6</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#7</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#8</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#9</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#10</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#11</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#12</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#13</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#14</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#15</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#16</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#17</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#18</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#19</a></li>
+                        <li><a href="@Url.Action("Index","Home")">Option#20</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div><!--content-left ends-->
+        <!--------------------------Content CENTER-->
+        <div class="content-center">
+            <div class="content-text">
+                <table class="contentpaneopen">
+                    <tbody>
+                        <tr>
+                            <td valign="top" colspan="2">
+                                <h1>Air War College</h1>
+                                <p style="text-align: justify;"><img id="fancyimg" src="~/Content/images/image2.jpg" style="float:right; margin:5px 5px 5px 15px;" width="350" alt="b1">The Command and Staff College Quetta is a premier military institution of Pakistan Army. The College is charged with the responsibility to train and groom the future leadership of the Army and those from the allied countries. In line with this mandate, the trainees here are imparted education and skills in a manner that enables them to handle their future assignments with an innovative approach and professionalism. The College indubitably is the cradle that nurtures, hones and tempers the intellectual potentialities of the student officers. It boasts of an ambiance animated by a wide ranging and a broad based curriculum where training in hardcore professional subjects is imparted using modern management techniques and latest research methodology in a state of the art IT environment.The Command and Staff College Quetta is a premier military institution of Pakistan Army. The College is charged with the responsibility to train and groom the future leadership of the Army and those from the allied countries. In line with this mandate, the trainees here are imparted education and skills in a manner that enables them to handle their future assignments The Command and Staff College Quetta is a premier military institution of Pakistan Army. The College is charged with the responsibility to train and groom the future leadership of the Army and those from the allied countries. In line with this mandate, the trainees here are imparted education and skills in a manner that enables them to handle their future assignments The Command and Staff College Quetta is a premier military institution of Pakistan Army. The College is charged with the responsibility to train and groom the future leadership of the Army and those from the allied countries. In line with this mandate, the trainees here are imparted education and skills in a manner that enables them to handle their future assignments </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!--Content text end-->
+            </div>
+        </div><!--Content-center ends-->
+        <!---------------------------CONTENT RIGHT----------------------------->
+        <div class="content-right">
+            <div class="box" style="width:93%">
+                <div class="box-top"><div class="box-heading">Announcements</div></div>
+                <div class="box-bottom">
+                    <marquee behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" style="height:170px; padding-left:5px;">
+                      @foreach (var item in Model.Announcement)
+                      {
+                        <a href="" target="_blank"><b><i>@Html.DisplayFor(modelItem => item.announcementText)</i></b></a><hr>
+                      }
+
+                    </marquee>
+                </div>
+            </div>
+
+            <div class="box" style="width:93%">
+                <div class="box-top"><div class="box-heading">Cyber Alerts</div></div>
+                <div class="box-bottom">
+                    <marquee behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" style="height:170px; padding-left:5px;">
+                        @foreach (var item in Model.cyberAlert)
+                        {
+                            <a href="" target="_blank"><b><i>@Html.DisplayFor(modelItem => item.cyberAlertText)</i></b></a><hr>
+                        }
+
+                    </marquee>
+
+                </div><!--BOXE bottom end-->
+            </div><!--BOX end-->
+
+            <div class="box" style="width:93%">
+                <div class="box-top"><div class="box-heading">Softwares</div></div>
+                <div class="box-bottom">
+                    <marquee behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" style="height:170px; padding-left:5px;">
+                        <a href="https://www.google.com.pk" target="_blank"><b><i>Software#1</i></b></a><hr>
+                        <a href="https://www.google.com.pk" target="_blank"><b><i>Software#2</i></b></a><hr>
+                        <a href="https://www.google.com.pk" target="_blank"><b><i>Software#3</i></b></a><hr>
+                        <a href="https://www.google.com.pk" target="_blank"><b><i>Software#1</i></b></a><hr>
+                        <a href="https://www.google.com.pk" target="_blank"><b><i>Software#2</i></b></a><hr>
+                        <a href="https://www.google.com.pk" target="_blank"><b><i>Software#3</i></b></a><hr>
+                    </marquee>
+                </div><!--BOXE bottom end-->
+            </div><!--BOX end-->
+        </div><!--content-right ends-->
+    </div>
+    <div style="clear: both;"></div>
+    <br>
+
